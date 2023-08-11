@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/whole_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    android:background="@color/grey_primary"
+    >
+
+    <LinearLayout
+        android:id="@+id/title_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/text_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/list"
+            android:textColor="@color/green_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            />
+
+        <TextView
+            android:id="@+id/text_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/story"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStories"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_main"
+        android:layout_marginTop="5dp"
+        android:showDividers="none"
+        />
+
+    <View
+        android:id="@+id/darkOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:alpha="0"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/logout_floating_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/map_floating_button"
+        app:layout_constraintEnd_toEndOf="@+id/map_floating_button"
+        android:layout_marginBottom="14dp"
+        app:srcCompat="@drawable/ic_logout_black"
+        android:clickable="false"
+        android:focusable="true"
+        app:tint="@color/black"
+        app:backgroundTint="@color/white"
+        android:contentDescription="@string/fab_button"
+        android:alpha="0"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/map_floating_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/add_floating_button"
+        app:layout_constraintEnd_toEndOf="@id/add_floating_button"
+        android:layout_marginBottom="14dp"
+        app:srcCompat="@drawable/ic_map_black"
+        android:clickable="false"
+        android:focusable="true"
+        app:tint="@color/black"
+        app:backgroundTint="@color/white"
+        android:contentDescription="@string/fab_button"
+        android:alpha="0"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_floating_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/main_floating_button"
+        app:layout_constraintEnd_toEndOf="@+id/main_floating_button"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/ic_camera_black"
+        android:clickable="false"
+        android:focusable="true"
+        app:tint="@color/black"
+        app:backgroundTint="@color/white"
+        android:contentDescription="@string/fab_button"
+        android:alpha="0"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_floating_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:tint="@color/white"
+        app:backgroundTint="@color/green_primary"
+        app:srcCompat="@drawable/ic_add_white"
+        android:contentDescription="@string/fab_button" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

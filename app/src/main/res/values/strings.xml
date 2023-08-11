@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Story App</string>
+    <string name="app_title">STORY</string>
+    <string name="app_title2">APP</string>
+    <string name="logo_welcome">Logo Welcome</string>
+    <string name="welcome_title">Share Your Story Here!</string>
+    <string name="welcome_text">
+        Welcome to Story App, the perfect platform for sharing your stories with a community of writers and readers. Write, Read, and Post!
+    </string>
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="login_logo">Login Logo</string>
+    <string name="selamat_datang">Welcome Writter!</string>
+    <string name="login_text">Welcome again to Story App! Please log in to access our platform and start creating amazing content.</string>
+    <string name="register_now">Register Now</string>
+    <string name="register_text">Create an account with the Story App to unlock awesome features! Simply fill out your information below.</string>
+    <string name="btn_regist_text">Register Now</string>
+    <string name="login_btn_text">LOGIN</string>
+    <string name="story_image">Story Image</string>
+    <string name="nama_user">Nama User</string>
+    <string name="created_at">Created at</string>
+    <string name="deskripsi_cerita">Deskripsi Cerita</string>
+    <string name="story_detail">Story Detail</string>
+    <string name="arrow_back">Arrow Back</string>
+    <string name="story_description">Story Description</string>
+    <string name="read_more">Read more</string>
+    <string name="post_story">Post Story</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="title_story_description">Story Description</string>
+    <string name="upload">Upload</string>
+    <string name="image">Image</string>
+    <string name="story">STORY</string>
+    <string name="list">LIST</string>
+    <string name="fab_button">Fab Button</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="location">Your Current Location</string>
+    <string name="retry">Coba lagi</string>
+    <string name="add_your_location">Add Your Location</string>
+    <string name="optional">(Optional)</string>
+    <string name="loc_desc">Press Here To Add Your Location</string>
+</resources>

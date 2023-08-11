@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_primary"
+    tools:context=".ui.add_activity.AddStoryActivity"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"
+            android:text="@string/post_story"
+            android:textSize="26sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/formContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
+            android:fillViewport="true"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="14dp"
+                android:background="@drawable/rounded_container"
+                >
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/garisTengah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/img_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/post_image"
+                        android:layout_width="350dp"
+                        android:layout_height="250dp"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/baseline_add_a_photo_24" />
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btn_camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/button_green"
+                    android:drawableStart="@drawable/ic_camera"
+                    android:text="@string/camera"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/garisTengah"
+                    app:layout_constraintStart_toStartOf="@+id/img_container"
+                    app:layout_constraintTop_toBottomOf="@+id/img_container" />
+
+                <Button
+                    android:id="@+id/btn_gallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/button_green"
+                    android:drawableStart="@drawable/ic_gallery"
+                    android:text="@string/gallery"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/img_container"
+                    app:layout_constraintStart_toEndOf="@id/garisTengah"
+                    app:layout_constraintTop_toBottomOf="@+id/img_container" />
+
+                <TextView
+                    android:id="@+id/text_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/add_your_location"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/btn_camera"
+                    app:layout_constraintTop_toBottomOf="@id/btn_camera" />
+
+                <TextView
+                    android:id="@+id/text_optional"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/optional"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/text_location"
+                    app:layout_constraintStart_toEndOf="@id/text_location"
+                    app:layout_constraintTop_toTopOf="@id/text_location" />
+
+                <TextView
+                    android:id="@+id/tc_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ed_desc"
+                    android:hint="@string/loc_desc"
+                    android:padding="6dp"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_gallery"
+                    app:layout_constraintStart_toStartOf="@+id/text_location"
+                    app:layout_constraintTop_toBottomOf="@+id/text_location"
+                    />
+
+                <TextView
+                    android:id="@+id/title_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/btn_camera"
+                    app:layout_constraintTop_toBottomOf="@id/tc_location"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/title_story_description"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    app:layout_constraintEnd_toEndOf="@id/btn_gallery"
+                    app:layout_constraintStart_toStartOf="@+id/title_desc"
+                    app:layout_constraintTop_toBottomOf="@id/title_desc"
+                    android:layout_marginTop="8dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="7dp"
+                        android:background="@drawable/ed_desc"
+                        android:gravity="top|start"
+                        android:textColor="@color/black"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_upload"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_green"
+                    app:layout_constraintTop_toBottomOf="@id/input_layout"
+                    app:layout_constraintStart_toStartOf="@id/btn_camera"
+                    app:layout_constraintEnd_toEndOf="@id/btn_gallery"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/upload"
+                    android:textColor="@color/white"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
