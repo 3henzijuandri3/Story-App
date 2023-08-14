@@ -10,6 +10,22 @@ MyStoryApp is an application that was made for the final submission from ["Belaj
 - Post Story (with location)
 - Open stories map (with Gmaps API)
 
+## Technology
+- Kotlin
+- AndroidX
+- Google Play Services (Maps and Location)
+- CameraX
+- Glide (Image loading library)
+- Retrofit (Networking library)
+- OkHttp (HTTP client)
+- Lifecycle components (ViewModel and LiveData)
+- AsyncHttp (LoopJ library for asynchronous HTTP requests)
+- DataStore (for storing key-value data)
+- CardView (UI component)
+- Room (Database library)
+- Paging (Paging library for loading data incrementally)
+- Coroutines (Kotlin concurrency framework)
+
 # App Interface
 * Splash Screen
 <img src="https://github.com/3henzijuandri3/Story-App/assets/89207690/d33d24d6-bb50-4776-b342-8b5cc01f6d1c.jpg" width="300">
