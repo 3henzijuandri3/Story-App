@@ -1,11 +1,12 @@
 # MyStoryApp
 
-MyStoryApp is an application that was made for the final submission from ["Belajar Pengembangan Aplikasi Android Intermediate by Dicoding"](https://www.dicoding.com/certificates/L4PQG6VYVZO1). In MyStoryApp, users are able to see a list of stories from other users, and users can also post new stories. The story data is fetched from the API provided by Dicoding.
+MyStoryApp is an application that was made for the final submission from ["Belajar Pengembangan Aplikasi Android Intermediate by Dicoding"](https://www.dicoding.com/certificates/L4PQG6VYVZO1). In MyStoryApp, users are able to see a list of stories from other users, users can also post new stories. The story data is fetched from the API provided by Dicoding.
 
 ## Features
 - Login
 - Register
-- Get Stories
+- Get Story List
+- Get Story Detail
 - Post Story
 - Post Story (with location)
 - Open stories map (with Gmaps API)
